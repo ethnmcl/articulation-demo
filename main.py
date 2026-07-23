@@ -7,7 +7,7 @@ import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-MODELS_DIR = Path(__file__).parent / "models"
+MODELS_DIR = Path(__file__).parent
 
 # Feature schemas (matching what each model was trained on)
 SIGNAL_FEATURE_COLS = [
