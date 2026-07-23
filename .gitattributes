@@ -1,0 +1,12 @@
+# from inside your repo folder
+cp /path/to/your/original/signal_diagnostic_model.pkl .
+cp /path/to/your/original/form_scorer_model.pkl .
+
+# add the binary rule first
+git add .gitattributes
+git commit -m "Force binary handling for pkl files"
+
+# force re-add the model files so git recommits them under the new rule
+git add --renormalize .
+git commit -m "Re-commit model files as binary to fix corruption"
+git push
